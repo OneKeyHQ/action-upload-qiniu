@@ -1,0 +1,30 @@
+{
+  "name": "action-upload-qiniu",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneKeyHQ/action-upload-qiniu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OneKeyHQ/action-upload-qiniu/issues"
+  },
+  "homepage": "https://github.com/OneKeyHQ/action-upload-qiniu#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "bluebird": "^3.7.2",
+    "bluebird-retry": "^0.11.0",
+    "glob": "^7.1.7",
+    "qiniu": "^7.3.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6"
+  }
+}

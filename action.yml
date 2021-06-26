@@ -1,0 +1,22 @@
+name: '@onekeyhq/upload-qiniu'
+description: 'github action for uploading files to qiniu cdn'
+author: 'onekeyhq'
+inputs:
+  ak:
+    description: 'access key for qiniu'
+    required: true
+  sk:
+    description: 'secret key for qiniu'
+    required: true
+  bucket:
+    description: 'bucket'
+    required: true
+  source_dir:
+    description: 'source dirctory'
+    required: true
+  target_dir:
+    description: 'target dir, folder key prefix'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
