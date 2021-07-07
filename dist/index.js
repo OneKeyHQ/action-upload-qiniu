@@ -67692,7 +67692,10 @@ async function main() {
     const targetDir = core.getInput('target_dir');
 
     const token = generatePutPolicyToken(bucket, ak, sk);
-    const config = new qiniu.conf.Config();
+    const config = new qiniu.conf.Config({
+      useCdnDomain: true,
+      useHttpsDomain: true,
+    });
     const uploader = new qiniu.form_up.FormUploader(config);
 
     await upload(
