@@ -67330,7 +67330,7 @@ module.exports = function (
         });
       });
       return retry(() => promise, { timeout: 100000, interval: 10000, backoff: 2 });
-    }, { concurrency: 3 });
+    }, { concurrency: 1 });
 }
 
 /***/ }),
