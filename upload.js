@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const qiniu = require('qiniu');
 const glob = require('glob');
@@ -21,8 +22,9 @@ module.exports = function (
 
       const promise = new Promise((resolve, reject) => {
         const putExtra = new qiniu.form_up.PutExtra();
+        const reader = fs.createReadStream(pathToFile);
 
-        uploader.putFile(token, key, pathToFile, putExtra, (err, body, info) => {
+        uploader.putStream(token, key, reader, putExtra, (err, body, info) => {
           if (err) {
             console.log(err);
             return reject(new Error(`Upload failed: ${pathToFile}`));

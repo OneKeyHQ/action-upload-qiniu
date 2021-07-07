@@ -1,0 +1,13 @@
+diff --git a/node_modules/qiniu/qiniu/conf.js b/node_modules/qiniu/qiniu/conf.js
+index 6c9cb72..679d3b1 100644
+--- a/node_modules/qiniu/qiniu/conf.js
++++ b/node_modules/qiniu/qiniu/conf.js
+@@ -17,7 +17,7 @@ exports.FormMimeUrl = 'application/x-www-form-urlencoded';
+ exports.FormMimeJson = 'application/json';
+ exports.FormMimeRaw = 'application/octet-stream';
+ exports.RS_HOST = 'rs.qiniu.com';
+-exports.RPC_TIMEOUT = 120000; // 120s
++exports.RPC_TIMEOUT = 300000; // 120s
+ exports.UC_HOST = 'uc.qbox.me';
+ 
+ // proxy
